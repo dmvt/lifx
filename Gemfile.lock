@@ -1,31 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    amq-protocol (1.9.2)
-    axiom-types (0.1.1)
-      descendants_tracker (~> 0.0.4)
-      ice_nine (~> 0.11.0)
-      thread_safe (~> 0.3, >= 0.3.1)
     bindata (2.1.0)
-    bunny (1.7.0)
-      amq-protocol (>= 1.9.2)
     coderay (1.1.0)
-    coercible (1.0.0)
-      descendants_tracker (~> 0.0.1)
     configatron (3.2.0)
-    descendants_tracker (0.0.4)
-      thread_safe (~> 0.3, >= 0.3.1)
-    emque-producing (1.0.0)
-      oj (~> 2.10)
-      virtus (~> 1.0)
-    equalizer (0.0.11)
-    ice_nine (0.11.1)
     lifx (0.4.11)
       bindata (~> 2.0)
       configatron (~> 3.0)
       timers (~> 1.0)
     method_source (0.8.2)
-    oj (2.12.7)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -33,20 +16,12 @@ GEM
     rack (1.6.1)
     rake (10.4.2)
     slop (3.6.0)
-    thread_safe (0.3.5)
     timers (1.1.0)
-    virtus (1.0.5)
-      axiom-types (~> 0.1)
-      coercible (~> 1.0)
-      descendants_tracker (~> 0.0, >= 0.0.3)
-      equalizer (~> 0.0, >= 0.0.9)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bunny
-  emque-producing
   lifx
   pry
   rack
