@@ -1,0 +1,48 @@
+
+<!doctype html>
+<html>
+  <head>
+    <title>JS1k, 1k demo submission [ID]</title>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  </head>
+  <body>
+    <canvas id="c"></canvas>
+    <script>
+      var b = document.body;
+      var c = document.getElementsByTagName('canvas')[0];
+      var a = c.getContext('2d');
+      document.body.clientWidth; // fix bug in webkit: http://qfox.nl/weblog/218
+      window.rgbPid = undefined;
+      window.rgbChange = function(rgb) {
+        clearTimeout(window.rgbPid);
+        window.rgbPid = setTimeout(function() {
+          $.ajax("/color", {
+            data: {
+              r: rgb[0],
+              g: rgb[1],
+              b: rgb[2]
+            }
+          });
+        }, 100)
+      }
+      window.updateBrightness = function(el) {
+        $.ajax("/brightness", {
+          data: {
+            level: $(el).val()
+          }
+        });
+      }
+      window.updatePower = function(el) {
+        if($(el).prop('checked')) {
+          $.ajax("/on");
+        } else {
+          $.ajax("/off");
+        }
+      }
+    </script>
+    <script src='colorwheel-1k/1k.js'></script>
+
+    <a href="http://github.com/bgrins/colorwheel-1k"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+  </body>
+</html>
