@@ -9,6 +9,7 @@ GEM
       configatron (~> 3.0)
       timers (~> 1.0)
     method_source (0.8.2)
+    pipe-ruby (0.3.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -23,6 +24,7 @@ PLATFORMS
 
 DEPENDENCIES
   lifx
+  pipe-ruby
   pry
   rack
   rake
