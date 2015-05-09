@@ -3,7 +3,7 @@ module Action
     include RequestHandler.handle("/")
 
     def run
-      [File.read("index.html")]
+      [File.read("public/index.html")]
     end
   end
 end
